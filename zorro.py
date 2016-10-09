@@ -1,4 +1,6 @@
 import csv
+import tornado
+
 def main():
 	f = open('names_20161004.csv', 'r')
 	try:
@@ -6,7 +8,7 @@ def main():
 		for row in reader:
 			# Using the requests module
 			# iterate through each row and pull info
-			print row[0]
+			t = Tornado(row)
 			pass
 	except Exception as e:
 		print "Error reading from csv file: {}".format(e)
