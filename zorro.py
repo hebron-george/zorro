@@ -1,8 +1,5 @@
 import csv
-import requests
-from bs4 import BeautifulSoup
 f = open('names_20161004.csv', 'r')
-site = 'http://infogob.com.pe/Politico/politico.aspx'
 try:
 	reader = csv.reader(f)
 	for row in reader:
