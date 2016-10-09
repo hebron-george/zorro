@@ -9,7 +9,6 @@ def main():
 			# Using the requests module
 			# iterate through each row and pull info
 			t = Tornado(row)
-			pass
 	except Exception as e:
 		print "Error reading from csv file: {}".format(e)
 	finally:
