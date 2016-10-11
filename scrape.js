@@ -39,13 +39,17 @@ function read_names_from_csv(data){
 		.fromPath(csv_file)
 		.on("data", function(data){
 			people.push(data);
+			console.log('Adding this names data: %j as type: ' + typeof(data), data[1]);
+			//sleep.sleep(2);
 			//console.log('One piece of data:');
 			//console.log(data[1]);
 		})
 		.on("end", function(){
 			console.log("Done collecting.");
-			console.log(people);
-			sleep.sleep(100000000000000000);
+			var peoplejson = JSON.stringify(people);
+			console.log(peoplejson);
+			//console.log(people);
+			//sleep.sleep(10);
 			return;
 		})
 	console.log("Finished reading names from csv file");
