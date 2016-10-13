@@ -2,4 +2,7 @@
 node_modules/
 *.log
 build/
-
+out.txt
+outfile
+test.html
+test.txt
