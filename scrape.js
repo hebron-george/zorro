@@ -20,30 +20,33 @@ var csv_file = 'names_20161004.csv';
 var people;
 var viewstate, viewstategenerator, eventvalidation;
 
+var count = 0;
+
 
 converter.on('end_parsed', function(jsonArray) {
 	people = jsonArray;
-	console.log('Finishehd parsing csv file');
+	console.log('Finished parsing csv file');
 	printeveryone();
 });
 fs.createReadStream(csv_file).pipe(converter);
 function printeveryone(){
 	people.forEach( function (person) {
-		console.log("Looking at person: " + person.rowid);
-		request.get(root_url, function(error, response, html){
-			if (!error && response.statusCode == 200) {
-				var $ = cheerio.load(html);
-				var input_tags = $('input').get();
-				input_tags.forEach(function(tag){
-					if (tag.attribs.name == '__VIEWSTATE'){ viewstate = tag.attribs.value; } else
-					if (tag.attribs.name == '__EVENTVALIDATION'){ eventvalidation = tag.attribs.value; } else
-					if (tag.attribs.name == '__VIEWSTATEGENERATOR'){ viewstategenerator = tag.attribs.value}	
-				});
-				console.log('Got the following for person ' + person.rowid + ':');
-				postPerson(person.nombres, person.apellido_paterno, person.apellido_materno, viewstate, viewstategenerator, eventvalidation);
-			}
-			return;
-		});
+		if (count++ == 0) {
+			request.get(root_url, function(error, response, html){
+				if (!error && response.statusCode == 200) {
+					var $ = cheerio.load(html);
+					var input_tags = $('input').get();
+					input_tags.forEach(function(tag){
+						if (tag.attribs.name == '__VIEWSTATE'){ viewstate = tag.attribs.value; } else
+						if (tag.attribs.name == '__EVENTVALIDATION'){ eventvalidation = tag.attribs.value; } else
+						if (tag.attribs.name == '__VIEWSTATEGENERATOR'){ viewstategenerator = tag.attribs.value}	
+					});
+					console.log('Got the following for person ' + person.rowid + ':');
+					postPerson(person.nombres, person.apellido_paterno, person.apellido_materno, viewstate, viewstategenerator, eventvalidation);
+				}
+				return;
+			});
+		}
 	} );	
 }
 
@@ -71,8 +74,13 @@ function postPerson(nombre, paterno, materno, vs, vsg, ev){
 		console.log('Status code: ' + response.statusCode);
 		if(!error && response.statusCode == 200){
 			var $ = cheerio.load(html);
-			var div = $('ctl00_ContentPlaceHolder1_content_right_listado');
-			console.log(div);
+			$('rowestillo').filter(function(){
+				var d = $(this);
+				console.log('Here is d printed out:');
+				console.log(d.text());
+			});
+		} else {
+			console.log('Error was set: %s', error);
 		}
 	});
 
