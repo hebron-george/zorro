@@ -23,4 +23,13 @@ describe('scraper', () => {
             expect(findPersonID(htmlPolitico)).toMatchSnapshot();
         });
     });
+    // 
+    // describe('scrape', () => {
+    //     fit('find the person id in the html', () => {
+    //         return scrape(`${__dirname}/names.test.csv`)
+    //             .then((result) => {
+    //                 expect(result).toMatchSnapshot();
+    //             })
+    //     });
+    // });
 });

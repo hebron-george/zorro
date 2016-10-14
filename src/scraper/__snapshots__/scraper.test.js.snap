@@ -16,3 +16,20 @@ Array [
   }
 ]
 `;
+
+exports[`scraper scrape find the person id in the html 1`] = `
+Array [
+  Object {
+    "apellido_materno": "ALVARADO",
+    "apellido_paterno": "ABAD",
+    "nombres": "THALIA",
+    "rowid": 1
+  },
+  Object {
+    "apellido_materno": "CASIMIRO",
+    "apellido_paterno": "ABAD",
+    "nombres": "DARWIN EUSTORGIO",
+    "rowid": 2
+  }
+]
+`;
