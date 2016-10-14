@@ -1,29 +1,22 @@
 {
-  "name": "zorro",
+  "name": "torro",
   "version": "0.1.0",
-  "description": "a nodejs web scraping project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hebron-george/zorro.git"
-  },
-  "keywords": [
-    "zorro",
-    "web",
-    "scraper"
-  ],
-  "author": "Hebron George",
-  "license": "BSD-2-Clause",
-  "bugs": {
-    "url": "https://github.com/hebron-george/zorro/issues"
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "cheerio": "~0.22.0",
     "csvtojson": "^1.0.3",
     "needle": "~1.1.2",
     "request": "~2.75.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
