@@ -6,11 +6,12 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
     "cheerio": "~0.22.0",
     "csvtojson": "^1.0.3",
+    "lodash": "^4.16.4",
     "needle": "~1.1.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "request": "~2.75.0"
   },
   "scripts": {

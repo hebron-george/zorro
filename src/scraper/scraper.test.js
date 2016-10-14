@@ -1,7 +1,12 @@
+var fs = require('fs');
+
 import {
-    asdf,
     loadNamesCSV,
+    scrape,
+    findPersonID,
 } from './scraper';
+
+import htmlPolitico from './html/politico.html.js';
 
 describe('scraper', () => {
     describe('loadNamesCSV', () => {
@@ -9,12 +14,13 @@ describe('scraper', () => {
             return loadNamesCSV(`${__dirname}/names.test.csv`)
                 .then((result) => {
                     expect(result).toMatchSnapshot();
-                })
+                });
         });
     });
-    //
-    // describe('', () => {
-    //
-    // });
 
+    describe('findPersonID', () => {
+        it('find the person id in the html', () => {
+            expect(findPersonID(htmlPolitico)).toMatchSnapshot();
+        });
+    });
 });

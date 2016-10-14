@@ -1,10 +1,7 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head><title>
+export default `<html xmlns="http://www.w3.org/1999/xhtml"><head><title>
 	INFOgob
-</title><meta content="Arturo Valenzuela Pizarro" name="Developer" /><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><meta content="INFOGOB, CANDIDATO, ELECCIONES, AFILIADO, JURADO NACIONAL DE ELECCIONES, JNE, ONPE, ORGANIZACION POLITICA, REVOCATORIA, VACANCIA, PARTIDO POLITICO, AUTORIDADES, PLAN GOBIERNO, HOJA VIDA, GOLONDRINO, PROPAGANDA ELECTORAL, PADRON ELECTORAL, PROMESAS ELECTORALES, PROCESO ELECTORAL, LISTA CANDIDATOS, ELECTORES, CCR" name="keywords" /><meta http-equiv="keywords" content="INFOGOB, CANDIDATO, ELECCIONES, AFILIADO, JURADO NACIONAL DE ELECCIONES, JNE, ONPE, ORGANIZACION POLITICA, REVOCATORIA, VACANCIA, PARTIDO POLITICO, AUTORIDADES, PLAN GOBIERNO, HOJA VIDA, GOLONDRINO, PROPAGANDA ELECTORAL, PADRON ELECTORAL, PROMESAS ELECTORALES, PROCESO ELECTORAL, LISTA CANDIDATOS, ELECTORES, CCR" /><link href="../Includes/css/default.css" type="text/css" rel="stylesheet" /><link href="../Includes/css/principal.css" type="text/css" rel="stylesheet" /><link href="../Includes/css/politico.css" type="text/css" rel="stylesheet" /><link href="../Includes/css/mygrid.css" type="text/css" rel="stylesheet" /><link href="../Includes/css/mylogin2.css" type="text/css" rel="stylesheet" />
-    <script src="../Includes/js/jquery-1.4.2.min.js" type="text/javascript" ></script>
+</title><meta content="Arturo Valenzuela Pizarro" name="Developer"><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta content="INFOGOB, CANDIDATO, ELECCIONES, AFILIADO, JURADO NACIONAL DE ELECCIONES, JNE, ONPE, ORGANIZACION POLITICA, REVOCATORIA, VACANCIA, PARTIDO POLITICO, AUTORIDADES, PLAN GOBIERNO, HOJA VIDA, GOLONDRINO, PROPAGANDA ELECTORAL, PADRON ELECTORAL, PROMESAS ELECTORALES, PROCESO ELECTORAL, LISTA CANDIDATOS, ELECTORES, CCR" name="keywords"><meta http-equiv="keywords" content="INFOGOB, CANDIDATO, ELECCIONES, AFILIADO, JURADO NACIONAL DE ELECCIONES, JNE, ONPE, ORGANIZACION POLITICA, REVOCATORIA, VACANCIA, PARTIDO POLITICO, AUTORIDADES, PLAN GOBIERNO, HOJA VIDA, GOLONDRINO, PROPAGANDA ELECTORAL, PADRON ELECTORAL, PROMESAS ELECTORALES, PROCESO ELECTORAL, LISTA CANDIDATOS, ELECTORES, CCR"><link href="../Includes/css/default.css" type="text/css" rel="stylesheet"><link href="../Includes/css/principal.css" type="text/css" rel="stylesheet"><link href="../Includes/css/politico.css" type="text/css" rel="stylesheet"><link href="../Includes/css/mygrid.css" type="text/css" rel="stylesheet"><link href="../Includes/css/mylogin2.css" type="text/css" rel="stylesheet">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="../Includes/js/jquery-1.4.2.min.js" type="text/javascript"></script>
     <script src="../Includes/js/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
     <script src="../Includes/js/jquery.simplemodal.1.4.1.min.js" type="text/javascript"></script>
     <script src="../Includes/js/jquery.bubbleup.js" type="text/javascript"></script>
@@ -14,7 +11,7 @@
     <script src="../Includes/js/jquery.ui.totop.js" type="text/javascript"></script>
     <script src="../Includes/js/osx.js" type="text/javascript"></script>
     <script src="../Includes/js/mylogin2.js" type="text/javascript"></script>
-    
+
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function() {
@@ -70,10 +67,10 @@
 <body>
 <form name="aspnetForm" method="post" action="politico.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
 <div>
-<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="4lHPM/wa4Kv2clFp475383+gnoo/Zxwm6hDlEAAkkb5rjmbmlYrrjft7gNrHL7NmsjuMnA2uacl7e01lO/7fCQD9Jnu18CPxl1tMUNfKCBYoiBwt7sOoOYOGpEzVmzRYE33YpkRGHEY/6uCykv0OzluOD1H2AroeWT36Q+5Ea3yo2XZ/VFYOyRy5XjJyn1avnAsBGSTUyQI7LWGXxMcZ9kuMLzZxNevFuU3TJut7LBr16gz8HKmS7C586x/jRF/QzPnMrGnloZcSmTAxfar0Dp2tRfE46cIzyfVazhCmLD1njGPRTDxxf/giSaNSSZEPUIwNXnpvkQ/TQVN6N5CFDihCz+lK721kokOkttdE6LcY581vY4B3TYpB6rlMrzOuvalqvAcNTwlOy6qfeysEIJ+WK8/Fi1HcKXINt6eHGNgmk/qfYgxAIgle/qoKdpOeXm9y8b5htDGMXBZXvPJexXM/i4X/9gt79KKytt8NPwA=" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="ej24G5w07x41bcywA57I7kOpxeCJHh++BBo82o8ZtmEElUCJV9Z39sZsZ0qJmrf1orUMC391VVDGFw1POuYc/+5llLT0bRVhBAlZBVUfeqPlI1bG2SpDlkFWMnqH35AyTtUts+Gq/7qpRIkMj0pQrPePoah2ftNITML+KoBpgCFd8Ukdku2PH95WmtB6TvvUk8s4pJwCYAuoI3fTIbUGgwCJ/YCgCBjrit/qm/3aB0g56fTeEhiJsoWyzJ4DKjawZh3qbrXqceKJMf1suvoG6tzssE1n+sIToht1SD745oognULCW6hcr7zstDX38xXv7xwIcSh2nWkHG4vASXt4MBEtVvYSeEuOwlSwFSuWx4HGhKh9Gbx+mhvCQHBxQ4/MBuJGWJ4tomQwKLVluF+Jbbe9+WI/eKFL3YSL3iuv6EPE66CYg349AEhq8kcNgQbJF7fXuu9YpVXIsWOAKpPXN/ilTrgcbpYzQ2m10M9JkMrl6pfu26gbYWqZkMMVRAiGLUWdJ/fWRFka8YKiNipXULO862AuQSsjTqii1KKIfp4VCnH57Wmy1BSw6jBMmCVc3+SI3nepGFIOaQGtsN3by7WDmKOx+SbGJCReY4CsbETQchRJb0SEpQ6O7vBWJkP0r1viHpvIFoIkld1cpvuSkyglW82R6VZvpcBKhZEdgSC7O1cQjMqLH6jJqKdh0pxesHV9NTH1hxQufCCFVTbsBbqvUnr24ijUasxmUX4RvMWmcsppyr5FSMaFSHGZpjSAfo5FiEThr2BGV2ke95lMsMgftNMYcATHXf8hx/d9rIFLbhspj5JpZbR7QvSPhJ0oRVttcayH70lh5gWCHu7Y+qcbBRUf2fLGaZSpFstnh2oZkljcE2V6d6qFNgizdXi/8WWx4IuWaDwyGdlCl731ohKpBu0KMkDTGVefYotxG6y46XqXMXhUe+5f9VfgiSvj0+0+FcILSO3sJvXuaNYdTgfefO/tC259MD3oYTnyVLJKot9gKaTEYUFWjBDpq0zS19OjZ9VHJzXYBqs+CFB9/jqgjq08B1+JiKjxkNIdPTD0kOqMGRbOS/8wp9VBmVCGpBP6zDk4jbkP3GycHKhrb8heh7pD060vaz9PrPbW7zo=">
 </div>
 
 <script type="text/javascript">
@@ -95,7 +92,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 <script src="/WebResource.axd?d=AZ4x85AqF70GRIguMPVt0NfFDhM08JE_kIfCseEn36W2XpO9SxUclxEzMvzSgIwrPQH0Nlk4Xq5xh5ElqC8hFpbyUKzZYEF6-rUkNHr_Jt41&amp;t=635720752266034286" type="text/javascript"></script>
 
-<script type="text/javascript" src="BusyBoxDotNet.axd?res=BBDN.js$YAHOO.js$dom.js$event.js$animation.js$BrowserSniff.js$Common.js$BusyBox.js&noGzip=1"></script>
+<script type="text/javascript" src="BusyBoxDotNet.axd?res=BBDN.js$YAHOO.js$dom.js$event.js$animation.js$BrowserSniff.js$Common.js$BusyBox.js&amp;noGzip=1"></script>
 <script type="text/javascript">
 //<![CDATA[
 var ctl00_ContentPlaceHolder1_bbxEsperaImage=new Image();ctl00_ContentPlaceHolder1_bbxEsperaImage.src="../Images/loader.gif";var ctl00_ContentPlaceHolder1_bbxEsperaOperaBackgroungImage=new Image();ctl00_ContentPlaceHolder1_bbxEsperaOperaBackgroungImage.src="BusyBoxDotNet.axd?res=maskBG.png&noGzip=1";var ctl00_ContentPlaceHolder1_bbxEspera=new BBDN.core.BusyBox("ctl00_ContentPlaceHolder1_bbxEspera","Por favor espere","La tarea esta siendo ejecutada. Por favor espere a que sea completada.","","","../Images/loader.gif","imageonly",true,false,false,"",50,100,"1px","#404040","Solid","#DCDCDC","normal","normal","8pt","Verdana","bold","normal","11pt","Verdana","","",0,"easeout",false,20,"center",true,500,"easeout",false,false,"","auto");function Show_ctl00_ContentPlaceHolder1_bbxEspera(){ctl00_ContentPlaceHolder1_bbxEspera.Show();}function Hide_ctl00_ContentPlaceHolder1_bbxEspera(){ctl00_ContentPlaceHolder1_bbxEspera.Close();}//]]>
@@ -286,9 +283,9 @@ return true;
 
 <div>
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E4FBEFF6" />
-	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
-	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="LP181em3NCkFBaYpndJrs3NIVGv0T1D0VFJ8fn24gstZ56Tb20ccHJb+VBrE/s/UMOUO4GuGXLvLClA2ODQJwE7PxDBLDScNyXIhOTUplDOf648tlBvc/K5Y1htF7Ayr0YxppvKDAOSGEcTCHtmj6Q==" />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E4FBEFF6">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="2LDWjBwh/Z2yUevDK5h/FcWC6qKg/pZNZxYPQRms4gCmFoMcIUh9K3KjoAWqKqGn7H57LTYb8YRtidCXpx4VA14jtC23vZ1A1Fc2Y9APcZkDuU6EICtnuNnhNaIcCGdBEDriPd4d59ct1fDr+PGWZg==">
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -299,9 +296,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 <div id="main" class="main">
 <div id="cuadro-left" class="cuadro-left">
     <div id="cuadro-left-logo" class="cuadro-left-logo">
-        <img alt="" src="../Images/designs/logo_infogob.png" border="0" usemap="#mapleft" /> 
+        <img alt="" src="../Images/designs/logo_infogob.png" border="0" usemap="#mapleft">
         <map name="mapleft" id="mapleft">
-            <area alt="" shape="rect" coords="2,2,180,65" href="../Default.aspx" title="INFOgob" />
+            <area alt="" shape="rect" coords="2,2,180,65" href="../Default.aspx" title="INFOgob">
         </map>
     </div>
     <div id="cuadro-left-fecha" class="cuadro-left-fecha">
@@ -309,9 +306,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
     </div>
 </div>
 <div id="cuadro-right" class="cuadro-right">
-    <img alt="" src="../Images/designs/logo_jne.png" border="0" usemap="#mapright" /> 
+    <img alt="" src="../Images/designs/logo_jne.png" border="0" usemap="#mapright">
     <map name="mapright" id="mapright">
-        <area alt="" shape="rect" coords="2,4,280,60" target="_blank" href="http://www.jne.gob.pe" title="Jurado Nacional de Elecciones" />
+        <area alt="" shape="rect" coords="2,4,280,60" target="_blank" href="http://www.jne.gob.pe" title="Jurado Nacional de Elecciones">
     </map>
 </div>
 <!-- Inicio de Cabecera -->
@@ -328,24 +325,24 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 <div id="cuerpo" class="cuerpo">
     <div id="cuerpo-title" class="cuerpo-title">
         <div id="cuerpo-title-left" class="cuerpo-title-left">
-            <div class="cuerpo-title-left-left"><img src="../Images/designs/titulo_izq.png" alt=""/></div>
+            <div class="cuerpo-title-left-left"><img src="../Images/designs/titulo_izq.png" alt=""></div>
             <div class="cuerpo-title-left-center">
             <span id="ctl00_LblDescripcion">INGRESA EL NOMBRE Y APELLIDOS O DNI DEL POLÍTICO</span>
-            </div>            
-            <div class="cuerpo-title-left-right"><img src="../Images/designs/titulo_der.png" alt=""/></div>
+            </div>
+            <div class="cuerpo-title-left-right"><img src="../Images/designs/titulo_der.png" alt=""></div>
         </div>
         <div id="header-inf-menu" class="header-inf-menu">
-            <div id="header-inf-menu-fondo"><img src="../Images/designs/fond_politico.png" alt="Politicos"/></div>
+            <div id="header-inf-menu-fondo"><img src="../Images/designs/fond_politico.png" alt="Politicos"></div>
             <div id="header-inf-menu-opcion">
                 <div id="header-inf-menu-opcion-lnk">
-                    <a href="politico.aspx"><img src="../Images/designs/menu_politico.png" alt="Politicos"/></a>
+                    <a href="politico.aspx"><img src="../Images/designs/menu_politico.png" alt="Politicos"></a>
                 </div>
             </div>
             <div id="header-inf-menu-barra">
                   <ul id="header-inf-menu-boton">
-                    <li><a href="../Localidad/localidad.aspx?IdLocalidad=80&IdUbigeo=000000&IdTab=0"><img src="../Images/designs/menu_localidad.png" class="../Images/designs/tab_localidades.png" alt=""/></a></li>
-                    <li><a href="../Partido/partido.aspx"><img src="../Images/designs/menu_partido.png" class="../Images/designs/tab_partidos.png" alt=""/></a></li>
-                    <li><a href="../Eleccion/eleccion.aspx"><img src="../Images/designs/menu_elecciones.png" class="../Images/designs/tab_elecciones.png" alt=""/></a></li>
+                    <li style="z-index: 100;"><a href="../Localidad/localidad.aspx?IdLocalidad=80&amp;IdUbigeo=000000&amp;IdTab=0"><img src="../Images/designs/menu_localidad.png" class="../Images/designs/tab_localidades.png" alt="" style="z-index: 0; top: 0px; left: 0px; width: 74px; overflow: hidden; display: block;"></a></li>
+                    <li style="z-index: 100;"><a href="../Partido/partido.aspx"><img src="../Images/designs/menu_partido.png" class="../Images/designs/tab_partidos.png" alt="" style="z-index: 0; top: 0px; left: 0px; width: 74px; overflow: hidden; display: block;"></a></li>
+                    <li style="z-index: 100000;"><a href="../Eleccion/eleccion.aspx"><img src="../Images/designs/menu_elecciones.png" class="../Images/designs/tab_elecciones.png" alt="" style="z-index: 100000; top: -4px; left: -4px; width: 82px; overflow: hidden; display: block;"></a></li>
                   </ul>
             </div>
             <div style="clear: both"></div>
@@ -357,33 +354,33 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
         <!-- Inicio de cuerpo Left -->
         <div id="content-left" class="content-left">
 	        <div id="content-left-menu" class="content-left-menu">
-                <ul id="content-left-menu-main" >
-                    <li><a href="../Default.aspx"><img id="INICIO" src="../images/designs/inicio_on.png" alt="" /></a></li>
-                    <li ><a href="../Complementos/nosotros.aspx"><img id="NOSOTROS" src="../images/designs/nosotros_off.png" alt="" /></a></li>
-                    <li ><a class="desplegable"><img id="PUBLICACIONES" src="../images/designs/publicaciones_off.png" alt="" /></a>
-                        <ul class="subnavegador">
+                <ul id="content-left-menu-main">
+                    <li><a href="../Default.aspx"><img id="INICIO" src="../images/designs/inicio_on.png" alt=""></a></li>
+                    <li><a href="../Complementos/nosotros.aspx"><img id="NOSOTROS" src="../images/designs/nosotros_off.png" alt=""></a></li>
+                    <li><a class="desplegable"><img id="PUBLICACIONES" src="../images/designs/publicaciones_off.png" alt=""></a>
+                        <ul class="subnavegador" style="display: none;">
                             <li><a href="../Complementos/boletines.aspx">BOLETINES</a></li>
                             <li><a href="../Complementos/reportes.aspx">REPORTES</a></li>
                             <li><a href="../infografias/principal.aspx">INFOGRAFÍAS</a></li>
                         </ul>
                     </li>
-                    <li ><a href="../Complementos/basedatos.aspx"><img id="BASEDATOS" src="../images/designs/basedatos_off.png" alt="" /></a></li>
-		            <li ><a href="../Complementos/premios.aspx"><img id="PREMIOS" src="../images/designs/premios_off.png" alt="" /></a></li>
-		            <li ><a class="lnk_contacto" href="../Complementos/contactenos.aspx"><img id="CONTÁCTANOS" src="../images/designs/contactenos_off.png" alt="" /></a></li>
+                    <li><a href="../Complementos/basedatos.aspx"><img id="BASEDATOS" src="../images/designs/basedatos_off.png" alt=""></a></li>
+		            <li><a href="../Complementos/premios.aspx"><img id="PREMIOS" src="../images/designs/premios_off.png" alt=""></a></li>
+		            <li><a class="lnk_contacto" href="../Complementos/contactenos.aspx"><img id="CONTÁCTANOS" src="../images/designs/contactenos_off.png" alt=""></a></li>
                 </ul>
 
                 <ul style="padding:4px 3px 4px 15px;list-style:none;">
                     <li></li>
-		            <li style="padding: 4px 0px;"><a id="alogfacebook" target="_blank" href="http://www.facebook.com/infogob"><img id="logfacebook" alt="" src="../Images/designs/facebook_off.png" border="0" title="FaceBook" /></a></li>
-		            <li style="padding: 4px 0px;"><a id="alogtwitter" target="_blank" href="http://twitter.com/infogob"><img id="logtwitter" alt="" src="../Images/designs/twitter_off.png" border="0" title="Twitter" /></a></li>
-		            <li style="padding: 4px 0px;"><a id="alogvideo" target="_blank" href="http://www.facebook.com/video/video.php?v=418756325926&ref=mf"><img id="logvideo" alt="" src="../Images/designs/video_off.png" border="0" title="Video" /></a></li>
+		            <li style="padding: 4px 0px;"><a id="alogfacebook" target="_blank" href="http://www.facebook.com/infogob"><img id="logfacebook" alt="" src="../Images/designs/facebook_off.png" border="0" title="FaceBook"></a></li>
+		            <li style="padding: 4px 0px;"><a id="alogtwitter" target="_blank" href="http://twitter.com/infogob"><img id="logtwitter" alt="" src="../Images/designs/twitter_off.png" border="0" title="Twitter"></a></li>
+		            <li style="padding: 4px 0px;"><a id="alogvideo" target="_blank" href="http://www.facebook.com/video/video.php?v=418756325926&amp;ref=mf"><img id="logvideo" alt="" src="../Images/designs/video_off.png" border="0" title="Video"></a></li>
                 </ul>
 	        </div>
         </div>
 
 	    <!-- Inicio de contenido -->
 	    <div id="content" class="content">
-            
+
 <script type="text/javascript" language="javascript">
     $(document).ready(function() {
     });
@@ -391,52 +388,70 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 
     <div id="content-right-menu" class="content-right-menu">
         <div id="content-right-menu-fondo" class="content-right-menu-fondo">
-                <div class="content-right-menu-titulo"><p>BUSCA AL POL&Iacute;TICO</p></div>
-				<div class="content-right-menu-punto"><img alt="" src="../Images/flecha_negro.png" /></div>
+                <div class="content-right-menu-titulo"><p>BUSCA AL POLÍTICO</p></div>
+				<div class="content-right-menu-punto"><img alt="" src="../Images/flecha_negro.png"></div>
         </div>
         <div id="content-right-menu-cuadro" class="content-right-menu-cuadro"></div>
         <div style="clear: both"></div>
     </div>
     <div id="content-right-busqueda" class="content-right-busqueda">
-    <table style = "width:90%; margin-left:70px; margin-top:30px; ">
-    <tr>
+    <table style="width:90%; margin-left:70px; margin-top:30px; ">
+    <tbody><tr>
         <td>Nombres:</td>
         <td>Apellido Paterno:</td>
         <td>Apellido Materno:</td>
     </tr>
     <tr>
-        <td><input name="ctl00$ContentPlaceHolder1$txt_nombres" type="text" maxlength="40" id="ctl00_ContentPlaceHolder1_txt_nombres" class="busqueda-input" />
+        <td><input name="ctl00$ContentPlaceHolder1$txt_nombres" type="text" value="PEDRO RAUL" maxlength="40" id="ctl00_ContentPlaceHolder1_txt_nombres" class="busqueda-input">
                 </td>
-        <td>                <input name="ctl00$ContentPlaceHolder1$txt_paterno" type="text" maxlength="40" id="ctl00_ContentPlaceHolder1_txt_paterno" class="busqueda-input" />
+        <td>                <input name="ctl00$ContentPlaceHolder1$txt_paterno" type="text" value="ABANTO" maxlength="40" id="ctl00_ContentPlaceHolder1_txt_paterno" class="busqueda-input">
                 </td>
-        <td><input name="ctl00$ContentPlaceHolder1$txt_materno" type="text" maxlength="40" id="ctl00_ContentPlaceHolder1_txt_materno" class="busqueda-input" />
+        <td><input name="ctl00$ContentPlaceHolder1$txt_materno" type="text" value="LOPEZ" maxlength="40" id="ctl00_ContentPlaceHolder1_txt_materno" class="busqueda-input">
                 </td>
-    </tr>   
+    </tr>
     <tr>
-       <td>DNI del Pol&iacute;tico:</td>
+       <td>DNI del Político:</td>
        <td></td>
        <td></td>
-    </tr> 
+    </tr>
     <tr>
-        <td><input name="ctl00$ContentPlaceHolder1$txt_dni" type="text" maxlength="8" id="ctl00_ContentPlaceHolder1_txt_dni" class="busqueda-input" />
+        <td><input name="ctl00$ContentPlaceHolder1$txt_dni" type="text" maxlength="8" id="ctl00_ContentPlaceHolder1_txt_dni" class="busqueda-input">
                 </td>
         <td></td>
         <td></td>
     </tr>
-    </table>
-    
+    </tbody></table>
+
         <fieldset>
             <p>
-                <input type="image" name="ctl00$ContentPlaceHolder1$ImgBtnAceptar" id="ctl00_ContentPlaceHolder1_ImgBtnAceptar" class="busqueda-boton" src="../Images/designs/btnBuscar.png" style="border-width:0px;" />
+                <input type="image" name="ctl00$ContentPlaceHolder1$ImgBtnAceptar" id="ctl00_ContentPlaceHolder1_ImgBtnAceptar" class="busqueda-boton" src="../Images/designs/btnBuscar.png" style="border-width:0px;">
             </p>
         </fieldset>
     </div>
-  
-    <div class="content-right-busqueda-linea"></div>
-    
-    
 
-        <div style="clear: both"></div>	    
+    <div class="content-right-busqueda-linea"></div>
+
+    <div id="ctl00_ContentPlaceHolder1_content_right_listado" class="content-right-listado">
+        <div class="content-right-listado-datos">
+            <div class="mygridcontainer">
+
+                <div>
+	<table class="mygrid" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder1_gvPolitico" style="width:790px;border-collapse:collapse;">
+		<tbody><tr>
+			<th scope="col">Item</th><th align="left" scope="col">Nombres</th><th align="left" scope="col">Apellido Paterno</th><th align="left" scope="col">Apellido Materno</th><th align="center" scope="col">Foto</th>
+		</tr><tr class="rowestilo">
+			<td align="center" style="width:30px;">
+                                1
+                            </td><td align="left" style="width:300px;"><a href="ficha.aspx?IdPolitico=16097875&amp;IdTab=0">PEDRO RAUL</a></td><td align="left" style="width:200px;"><a href="ficha.aspx?IdPolitico=16097875&amp;IdTab=0">ABANTO</a></td><td align="left" style="width:200px;"><a href="ficha.aspx?IdPolitico=16097875&amp;IdTab=0">LOPEZ</a></td><td align="center" style="width:60px;"><a href="ficha.aspx?IdPolitico=16097875&amp;IdTab=0"><img src="../fotos/17/87/91/17879168.jpg" border="0" alt="" height="25px" width="20px"></a></td>
+		</tr>
+	</tbody></table>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+        <div style="clear: both"></div>
 	    </div>
     	<!-- Fin de contenido -->
     </div>
@@ -446,7 +461,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 <!-- Inicio de Pie -->
 <div id="footer" class="footer">
 	<div id="footer-top" class="footer-top">
-        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/infogob&layout=standard&show_faces=false&width=150&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:500px; height:23px"></iframe>
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com/infogob&amp;layout=standard&amp;show_faces=false&amp;width=150&amp;action=like&amp;colorscheme=light" scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:500px; height:23px"></iframe>
 	</div>
 	<div id="footer-bottom" class="footer-bottom">
 	    <div id="footer-bottom-left" class="footer-bottom-left">
@@ -456,30 +471,12 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 	        <p>Av. Nicolás de Piérola 1070 - Lima 1 T.(511) 311-1700</p>
 	    </div>
 	</div>
-	<div style="clear: both"></div>		
+	<div style="clear: both"></div>
 </div>
 <!-- Fin de Pie -->
 
 </div>
 
 
-
-<script type="text/javascript">
-//<![CDATA[
-WebForm_AutoFocus('ctl00_ContentPlaceHolder1_txt_nombres');Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"FilterMode":2,"InvalidChars":"0123456789=*+-_{}[],;.:\u003c\u003e~`^´¨¡¿?\\)(/&%$#\"!°|","id":"ctl00_ContentPlaceHolder1_FltTxtBoxExt2"}, null, null, $get("ctl00_ContentPlaceHolder1_txt_nombres"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"FilterMode":2,"InvalidChars":"0123456789=*+-_{}[],;.:\u003c\u003e~`^´¨¡¿?\\)(/&%$#\"!°|","id":"ctl00_ContentPlaceHolder1_FltTxtBoxExt3"}, null, null, $get("ctl00_ContentPlaceHolder1_txt_paterno"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"FilterMode":2,"InvalidChars":"0123456789=*+-_{}[],;.:\u003c\u003e~`^´¨¡¿?\\)(/&%$#\"!°|","id":"ctl00_ContentPlaceHolder1_FltTxtBoxExt4"}, null, null, $get("ctl00_ContentPlaceHolder1_txt_materno"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"FilterType":2,"id":"ctl00_ContentPlaceHolder1_FltTxtBoxExt1"}, null, null, $get("ctl00_ContentPlaceHolder1_txt_dni"));
-});
-//]]>
-</script>
-</form>
-</body>
-</html>
+<a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a><div style="font-family: Helvetica, Arial, sans-serif; color: rgb(51, 51, 51); font-size: 12px; font-weight: bold; position: absolute; z-index: 100000; top: 111px; left: 814px; visibility: visible; display: block;"><img src="../Images/designs/tab_elecciones.png" alt=""></div></body></html>
+`;
