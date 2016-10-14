@@ -1,0 +1,40 @@
+Project Description
+If you are interested, please read the instructions below and submit:
+
+I.	A bid.
+
+II.	An estimate of how long this will take you.
+
+III.	A very brief explanation of how you will execute this task.
+
+IV.	IMPORTANT: send me an example of the deliverables (detailed below) using a couple of names. Please, do this manually -- no significant time investments or coding are required to do this. I just want to make sure that everything has been clearly understood.
+
+These are the instructions in detail:
+
+1.	The comma-delimited text file “names_20161004.txt” is a list of 12977 names with 4 columns: ROWID, NOMBRES, APELLIDO_PATERNO, and APELLIDO_MATERNO.
+
+2.	For each row in names_20161004.txt, go to http://infogob.com.pe/Politico/politico.aspx and enter the NOMBRES, APPELIDO_PATERNO, and APELLIDO_MATERNO in the search engine. Then click on “buscar”.
+
+3.	Click on the person that EXACTLY matches the information entered in the step above. (see additional_details.pdf for more information on this).
+
+4.	Click on the PROCESOS ELECTORALES tab. (URL finishes in “IdTab=1”). Check if the politician was a mayoral candidate (i.e., either “ALCALDE DISTRITAL” or “ALCALDE PROVINCIAL”) for the election “ELECCIONES REGIONALES Y MUNICIPALES 2014”. You will see these in the sub-table. If yes, go to 5. If not, move on to the next name.
+
+5.	Click on the “HOJA DE VIDA” of that corresponds to the 2014 election “ELECCIONES REGIONALES Y MUNICIPALES 2014”. This link is embedded in the PROCESOS ELECTORALRES sub-table. The link in the uppermost part of the webpage saying “ver hoja de vida” is NOT the one we want.
+
+6.	Scrape all the data found in the HOJA DE VIDA. I suggest reporting the scraped data in a rectangular format where each row correspond to a politician and each column to an item of the HOJA DE VIDA. Identify each politician (row) with the rowid of names_20161004.txt and the politician id that can be found in the URL of PROCESOS ELECTORALES (IdPolitico). However, I am open to other formats/forms that may work better or may be easier/faster for you. Let me know. Take a look at the source code of the webpage.
+
+7.	Save the PROCESOS ELECTORALES tab (URL finishes in “IdTab=1”) as HTML with the name “IdTab1_IdPolitico#.html, where # is the politician’s id number. Do the same for the HISTORIAL PARTIDARIO tab (URL finishes in “IdTab=0”). Save that web page as HTML with the name “IdTab0_IdPolitico#.html”.
+
+8.	Record all your steps in “logfile.xlsx”. The idea is to save all the URLs from which information was downloaded and the corresponding file names. See the attached example for details.
+
+9.	I am attaching and example (example.zip), the name list, and further clarifications (additional_details.pdf). Please, do take a detailed look at each of these. Also, use the example logfile I provide as a template for yours.
+
+The deliverables for this project are:
+
+a)	All downloaded files.
+
+b)	Dataset(s) with the scraped information of the HOJAS DE VIDA (XLSX).
+
+c)	A complete logfile (XLSX).
+
+d)	The code you used to download the information.
