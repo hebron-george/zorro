@@ -25,24 +25,24 @@ function doTheWork(person) {
             return saveHtml('politico', person, personID, politicoHtml)
                 .then(() => personID);
         })
-        // .then((personID) => {
-        //     return Promise.all([getFichaTab0Html(personID), getFichaTab1Html(personID)])
-        //         .then((fichaTab0Html, fichaTab1Html) => {
-        //             return saveHtml('fichaTab0', person, personId, fichaTab0Html)
-        //                 .then(() => saveHtml('fichaTab1', person, personId, fichaTab1Html))
-        //                 .then(() => getResumeHtml(getResumeLink(fichaTab1HTML)))
-        //                 .then((resumeHtml) => saveHtml('resume', person, personId, resumeHtml));
-        //         });
-        // })
+        .then((personID) => {
+            return Promise.all([getFichaTab0Html(personID), getFichaTab1Html(personID)])
+                .then((fichaTab0Html, fichaTab1Html) => {
+                    return saveHtml('fichaTab0', person, personID, fichaTab0Html)
+                        .then(() => saveHtml('fichaTab1', person, personID, fichaTab1Html))
+                        .then(() => getResumeHtml(getResumeLink(fichaTab1HTML)))
+                        .then((resumeHtml) => saveHtml('resume', person, personID, resumeHtml));
+                });
+        })
 }
 
-function getHtmlFileName(fileType, person, personId) {
-    return `${fileType}-${personId}-${person.nombres}-${person.apellido_paterno}-${person.apellido_materno}.html`;
+function getHtmlFileName(fileType, person, personID) {
+    return `${fileType}-${personID}-${person.nombres}-${person.apellido_paterno}-${person.apellido_materno}.html`;
 }
 
-function saveHtml(fileType, person, personId, html) {
+function saveHtml(fileType, person, personID, html) {
     return new Promise((resolve, reject) => {
-        const filename = getHtmlFileName(fileType, person, personId);
+        const filename = getHtmlFileName(fileType, person, personID);
 
         fs.writeFile(`${__dirname}/results/${filename}`, html, (err) => {
             if (err) {
@@ -122,6 +122,43 @@ function findPersonID(html) {
     return Number(match[1]);
 }
 
+function getFichaTab0Html(personID) {
+    return new Promise((resolve, reject) => {
+        const url = `http://infogob.com.pe/Politico/ficha.aspx?IdPolitico=${personID}&IdTab=0`;
+        request(url, (err, res, html) => {
+            console.log(`GET /ficha.aspx tab 0: ${res.statusCode}`)
+            if (err || res.statusCode !== 200) {
+                return reject(err);
+            }
+            return resolve(html);
+        })
+    })
+}
+
+function getFichaTab1Html(personID) {
+    return new Promise((resolve, reject) => {
+        const url = `http://infogob.com.pe/Politico/ficha.aspx?IdPolitico=${personID}&IdTab=1`;
+        request(url, (err, res, html) => {
+            console.log(`GET /ficha.aspx tab 1: ${res.statusCode}`)
+            if (err || res.statusCode !== 200) {
+                return reject(err);
+            }
+            return resolve(html);
+        })
+    })
+}
+
+function getResumeLink(fichaTab1HTML) {
+    // TODO
+    var $ = cheerio.load(fichaTab1HTML);
+
+    return $;
+}
+
+function getResumeHtml(resumeLink) {
+    // TODO
+}
+
 module.exports = {
     scrape,
     loadNamesCSV,
@@ -130,4 +167,6 @@ module.exports = {
     saveHtml,
     doTheWork,
     getPoliticoHtml,
+    getFichaTab0Html,
+    getResumeLink,
 };

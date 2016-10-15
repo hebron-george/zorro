@@ -1,4 +1,4 @@
-
+export default `
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head><title>
@@ -14,7 +14,7 @@
     <script src="../Includes/js/jquery.ui.totop.js" type="text/javascript"></script>
     <script src="../Includes/js/osx.js" type="text/javascript"></script>
     <script src="../Includes/js/mylogin2.js" type="text/javascript"></script>
-    
+
 
     <script type="text/javascript" language="javascript">
         $(document).ready(function() {
@@ -295,7 +295,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 <div id="main" class="main">
 <div id="cuadro-left" class="cuadro-left">
     <div id="cuadro-left-logo" class="cuadro-left-logo">
-        <img alt="" src="../Images/designs/logo_infogob.png" border="0" usemap="#mapleft" /> 
+        <img alt="" src="../Images/designs/logo_infogob.png" border="0" usemap="#mapleft" />
         <map name="mapleft" id="mapleft">
             <area alt="" shape="rect" coords="2,2,180,65" href="../Default.aspx" title="INFOgob" />
         </map>
@@ -305,7 +305,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
     </div>
 </div>
 <div id="cuadro-right" class="cuadro-right">
-    <img alt="" src="../Images/designs/logo_jne.png" border="0" usemap="#mapright" /> 
+    <img alt="" src="../Images/designs/logo_jne.png" border="0" usemap="#mapright" />
     <map name="mapright" id="mapright">
         <area alt="" shape="rect" coords="2,4,280,60" target="_blank" href="http://www.jne.gob.pe" title="Jurado Nacional de Elecciones" />
     </map>
@@ -327,7 +327,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
             <div class="cuerpo-title-left-left"><img src="../Images/designs/titulo_izq.png" alt=""/></div>
             <div class="cuerpo-title-left-center">
             <span id="ctl00_LblDescripcion">INGRESA EL NOMBRE Y APELLIDOS O DNI DEL POLÍTICO</span>
-            </div>            
+            </div>
             <div class="cuerpo-title-left-right"><img src="../Images/designs/titulo_der.png" alt=""/></div>
         </div>
         <div id="header-inf-menu" class="header-inf-menu">
@@ -379,7 +379,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 
 	    <!-- Inicio de contenido -->
 	    <div id="content" class="content">
-            
+
     <script type="text/javascript" language="javascript">
         $(document).ready(function() {
             var icons = { header: "ui-icon-circle-arrow-e", activeHeader: "ui-icon-circle-arrow-s", headerSelected: "ui-icon-circle-arrow-s" };
@@ -387,7 +387,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
         });
     </script>
 
-    
+
 
 <link rel="stylesheet" type="text/css" href="../Includes/css/jquery-ui-dialog.css" />
 <script type="text/javascript">
@@ -450,7 +450,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
         <div class="content-foto">
             <img src="/Images/avatar.png" alt="Alternate Text" />
         </div>
-        <div class="content-nombres"><span id="ctl00_ContentPlaceHolder1_cabecera1_LblNombresAfiliado"></span> 
+        <div class="content-nombres"><span id="ctl00_ContentPlaceHolder1_cabecera1_LblNombresAfiliado"></span>
             <br />
             <strong><span id="ctl00_ContentPlaceHolder1_cabecera1_LblApellidosAfiliado"></span></strong>
         </div>
@@ -511,16 +511,16 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 		            <td style="width:14px;vertical-align: middle;"><img alt="" src="../Images/designs/flechaderecha.png" width="13" height="14" /></td>
 	            </tr>
             </table>
-    
-                   
-        
-            
+
+
+
+
         </div>
     </div>
     <div style="clear:both"></div>
 </div>
 <div style="clear: both"></div>
-    
+
 <div id="dialog_hv" title="Basic dialog">
 <p>La presentación de Declaración Jurada de Hoja de Vida es obligatoria a partir de las EG 2006, únicamente para candidatos inscritos.</p>
 </div>
@@ -530,7 +530,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 <div id="dialog_dj" title="Basic dialog">
 <p>Según la Ley N.° 30326, la presentación de Declaración Jurada de Bienes y Rentas es obligatoria a partir de las EG 2016 como parte de la Declaración Jurada de Hoja de Vida.</p>
 </div>
-    
+
     <div id="content-right-tabs" class="content-right-tabs">
         <div id="content-right-tabs-menu" class="content-right-tabs-menu">
             <a href="#ctl00_ContentPlaceHolder1_TabsMenu_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=SozxDkuJzSwD8Owf_rQCq5OrkJya8fho_h01RCzbfi0vP4Z7tiuy1RxYtpowJ3NsxJM95FIXQ4vCMfMUmR7TMxVuphHILSffWh6fA4inl7E1&amp;t=635720752266034286" width="0" height="0" style="border-width:0px;" /></a><table id="ctl00_ContentPlaceHolder1_TabsMenu" class="ctl00_ContentPlaceHolder1_TabsMenu_2" cellpadding="0" cellspacing="0" border="0">
@@ -562,8 +562,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
         <div id="content-right-tabs-fila" class="content-right-tabs-fila">
         </div>
         <div id="content-right-tabs-datos" class="content-right-tabs-datos">
-            
-                    
+
+
 <div class="mygridtitle">
     <span>PROCESOS ELECTORALES</span>
 </div>
@@ -587,17 +587,17 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 </div>
 </div>
 
-                
 
-            <div style="display:block; float:right; padding : 0px 0px 5px 0px;">      
+
+            <div style="display:block; float:right; padding : 0px 0px 5px 0px;">
                 <img src="../Images/designs/btnRegresar.png" border="0" onclick="javascript:window.location.href='/Politico/politico.aspx';" style="CURSOR:pointer"
 	                title="Regresar a la pantalla anterior" alt='' />
-            </div>             
-        </div>        
+            </div>
+        </div>
     </div>
 
 
-        <div style="clear: both"></div>	    
+        <div style="clear: both"></div>
 	    </div>
     	<!-- Fin de contenido -->
     </div>
@@ -617,7 +617,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ToolkitScriptManager1', 'aspn
 	        <p>Av. Nicolás de Piérola 1070 - Lima 1 T.(511) 311-1700</p>
 	    </div>
 	</div>
-	<div style="clear: both"></div>		
+	<div style="clear: both"></div>
 </div>
 <!-- Fin de Pie -->
 
@@ -638,3 +638,4 @@ ctl00_ContentPlaceHolder1_TabsMenu_Data.staticHoverHyperLinkClass = 'ctl00_Conte
 </form>
 </body>
 </html>
+`

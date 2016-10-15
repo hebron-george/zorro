@@ -7,9 +7,11 @@ import {
     getHtmlFileName,
     saveHtml,
     getPoliticoHtml,
+    getResumeLink,
 } from './scraper';
 
 import htmlPolitico from './html/politico.html.js';
+import htmlFichaTab1 from './html/ficha-tab1.html.js';
 
 describe('scraper', () => {
     describe('loadNamesCSV', () => {
@@ -68,6 +70,12 @@ describe('scraper', () => {
                 .then((html) => {
                     expect(html).toContain('ficha.aspx');
                 })
+        })
+    });
+
+    describe('getResumeLink', () => {
+        fit('should find the resume link for 2014', () => {
+            expect(getResumeLink(htmlFichaTab1)).toEqual(3);
         })
     });
 });
