@@ -46,7 +46,7 @@ function saveHtml(fileType, person, personId, html) {
     return new Promise((resolve, reject) => {
         const filename = getHtmlFileName(fileType, person, personId);
 
-        fs.writeFile(`${__dirname}/results/${filename}`, data, (err) => {
+        fs.writeFile(`${__dirname}/results/${filename}`, html, (err) => {
             if (err) {
                 return reject(err);
             }
@@ -97,5 +97,6 @@ module.exports = {
     loadNamesCSV,
     findPersonID,
     getHtmlFileName,
+    saveHtml,
     doTheWork,
 };

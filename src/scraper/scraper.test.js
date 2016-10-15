@@ -5,6 +5,7 @@ import {
     scrape,
     findPersonID,
     getHtmlFileName,
+    saveHtml,
 } from './scraper';
 
 import htmlPolitico from './html/politico.html.js';
@@ -26,7 +27,7 @@ describe('scraper', () => {
     });
 
     describe('getHtmlFileName', () => {
-        it('find the person id in the html', () => {
+        it('formats the html file name', () => {
             const fileType = 'resume';
             const person = {
                 apellido_materno: 'ALVARADO',
@@ -36,6 +37,20 @@ describe('scraper', () => {
             };
             const personId = 666;
             expect(getHtmlFileName(fileType, person, personId)).toMatchSnapshot();
+        });
+    });
+
+    describe('saveHtml', () => {
+        it('creates a file and doesnt blow up', () => {
+            const fileType = 'resume';
+            const person = {
+                apellido_materno: 'ALVARADO',
+                apellido_paterno: 'ABAD',
+                nombres: 'THALIA',
+                rowid: 1,
+            };
+            const personId = 666;
+            return saveHtml(fileType, person, personId, 'asdf');
         });
     });
 });
