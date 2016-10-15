@@ -58,7 +58,7 @@ describe('scraper', () => {
     });
 
     describe('getPoliticoHtml', () => {
-        it('should actually make a request and return the html', () => {
+        xit('should actually make a request and return the html', () => {
             const person = {
                 apellido_materno: 'ALVARADO',
                 apellido_paterno: 'ABAD',
@@ -74,8 +74,8 @@ describe('scraper', () => {
     });
 
     describe('getResumeLink', () => {
-        fit('should find the resume link for 2014', () => {
-            expect(getResumeLink(htmlFichaTab1)).toEqual(3);
+        it('should find the resume link for 2014', () => {
+            expect(getResumeLink(htmlFichaTab1)).toMatchSnapshot();
         })
     });
 });

@@ -27,10 +27,16 @@ function doTheWork(person) {
         })
         .then((personID) => {
             return Promise.all([getFichaTab0Html(personID), getFichaTab1Html(personID)])
-                .then((fichaTab0Html, fichaTab1Html) => {
+                .then(([fichaTab0Html, fichaTab1Html]) => {
                     return saveHtml('fichaTab0', person, personID, fichaTab0Html)
                         .then(() => saveHtml('fichaTab1', person, personID, fichaTab1Html))
-                        .then(() => getResumeHtml(getResumeLink(fichaTab1HTML)))
+                        .then(() => {
+                            const resumeLink = getResumeLink(fichaTab1Html)
+                            if (resumeLink) {
+                                return getResumeHtml(resumeLink);
+                            }
+                            return Promise.resolve('Not found');
+                        })
                         .then((resumeHtml) => saveHtml('resume', person, personID, resumeHtml));
                 });
         })
@@ -105,12 +111,12 @@ function getPoliticoHtml(person) {
         		'ctl00$ContentPlaceHolder1$ImgBtnAceptar.y': '10'
         	};
 
-            request.post({url: 'http://infogob.com.pe/Politico/politico.aspx', form: data}, (err, res, wef) => {
+            request.post({url: 'http://infogob.com.pe/Politico/politico.aspx', form: data}, (err, res, html) => {
                 console.log('POST politico.aspx: ' + res.statusCode);
                 if (err || res.statusCode !== 200) {
                     return reject(err);
                 }
-                return resolve(wef);
+                return resolve(html);
         	});
         });
     });
@@ -149,14 +155,36 @@ function getFichaTab1Html(personID) {
 }
 
 function getResumeLink(fichaTab1HTML) {
-    // TODO
-    var $ = cheerio.load(fichaTab1HTML);
+    console.log('fichaTab1HTML', fichaTab1HTML)
 
-    return $;
+    var $ = cheerio.load(fichaTab1HTML);
+    const rowsMatching2014 = $(".mygrid tr").filter((i, el) => {
+        const html = $(el).html();
+        return html.indexOf('MUNICIPALES 2014') !== -1;
+    });
+
+    if (rowsMatching2014.length === 0) {
+        return null;
+    }
+
+    const links = $(rowsMatching2014[0])
+        .find('a')
+        .map((i, el) => $(el).attr('href'))
+        .toArray();
+
+    return links.find((link) => link.indexOf('HojaVida') !== -1);
 }
 
 function getResumeHtml(resumeLink) {
-    // TODO
+    return new Promise((resolve, reject) => {
+        request(resumeLink, (err, res, html) => {
+            console.log(`GET resume: ${res.statusCode}`)
+            if (err || res.statusCode !== 200) {
+                return reject(err);
+            }
+            return resolve(html);
+        })
+    })
 }
 
 module.exports = {
