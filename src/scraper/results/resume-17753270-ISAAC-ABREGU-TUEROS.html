@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+    <!--[if lt IE 7]>      <html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html lang="es" class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html lang="es" class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>JNE - FORMATO RESUMEN DE PLAN DE GOBIERNO 2015-2018</title>
+    <!--<meta name="description" content="" />-->
+    <!--<meta name="viewport" content="width=950, initial-scale=1" />-->
+        
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/printer.css" />
+    <link rel="stylesheet" type="text/css" href="../css/hojavida.css" />
+    <script type="text/javascript" src="../jscript/modernizr-2.6.2.min.js"></script>    
+
+
+</head>
+
+<body>
+
+    <div id="wrap" class="clearfix">
+        
+        <input name="txtIdCandidato" type="hidden" id="txtIdCandidato" value="25142" />
+        <input name="txtIdProceso" type="hidden" id="txtIdProceso" value="72" />
+        <input name="txtIdOPolitica" type="hidden" id="txtIdOPolitica" value="1268" />        
+
+        <div id="hoja">
+        <center><a href="http://www.jne.gob.pe/"><img src="../img/logos/logoGrande.png" border="0" style="margin:5px 0px;" /></a></center>
+        <div class="titulo_h">DECLARACIÓN JURADA DE VIDA DEL CANDIDATO</div> 
+        
+        <div id="cont_hoja">            
+            <div class="foto">                
+                <!--<input type="button" id="btnImprimir" value="Imprimir" />-->
+                <img id="fotoCandidato" src="" style="width:120px; border-width:0px;" />
+            </div>
+            <div class="linea_"></div>
+
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td width="40">
+                    <span class="nun">I</span>
+                    </td>
+                    <td valign="middle">
+                    <div class="titulo_h2">DATOS PERSONALES DEL CANDIDATO</div>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="tabla_hoja">
+                <tr>
+                    <th style="width:20%;">Organización política</th>
+                    <td style="width:30%;">
+                        <span id="txtOrganizacionPolitica"></span>
+                    </td>
+                    <th style="width:20%;">No de registro</th>
+                    <td style="width:30%;">
+                        <span id="txNroRegistro"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Cargo al que postula</th>
+                    <td><span id="txtCargoPostula"></span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>Lugar al que postula &nbsp;</th>
+                    <td colspan="3"><span id="txtLugarPostula"></span></td>
+                </tr>
+                <tr>
+                    <th>Forma de designación</th>
+                    <td colspan="3"><span id="txtFormaDesignacion"></span></td>
+                </tr>
+                <tr>
+                    <th>DNI</th>
+                    <td><span id="txtDNI"></span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>Apellido Paterno</th>
+                    <td colspan="3"><span id="txtApellidoPaterno"></span></td>
+                </tr>
+                <tr>
+                    <th>Apellido Materno</th>
+                    <td colspan="3"><span id="txtApellidoMaterno"></span></td>
+                </tr>
+                <tr>
+                    <th>Nombres &nbsp;</th>
+                    <td colspan="3"><span id="txtNombres"></span></td>
+                </tr>
+                <tr>
+                    <th>Fecha de Nacimiento</th>
+                    <td><span id="txtFechaNacimiento"></span></td>
+                    <th>Sexo</th>
+                    <td><span id="txtSexo"></span></td>
+                </tr>
+                <tr>                    
+                    <th>Correo electrónico</th>
+                    <td><span id="txtCorreoElectronico"></span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Lugar de Nacimiento</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <th>País</th>
+                    <td colspan="3"><span id="txtPais"></span></td>
+                </tr>
+                
+                <tr>
+                    <th>Departamento</th>
+                    <td colspan="3"><span id="txtDepartamentoNac"></span></td>
+                </tr>
+                <tr>
+                    <th>Provincia</th>
+                    <td colspan="3"><span id="txtProvinciaNac"></span></td>
+                </tr>
+                <tr>
+                    <th>Distrito</th>
+                    <td colspan="3"><span id="txtDistritoNac"></span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Lugar de residencia / domicilio</th>
+                    <td colspan="3"><span id="txtLugarResicencia"></span></td>
+                </tr>
+                <tr>
+                    <th>Departamento</th>
+                    <td colspan="3"><span id="txtLugarDepartamentoRes"></span></td>
+                </tr>
+                <tr>
+                    <th>Provincia</th>
+                    <td colspan="3"><span id="txtLugarProvinciaRes"></span></td>
+                </tr>
+                <tr>
+                    <th>Distrito</th>
+                    <td colspan="3"><span id="txtLugarDistritoRes"></span></td>
+                </tr>
+                <tr>
+                    <th>Tiempo de Residencia</th>
+                    <td colspan="3"><span id="txtTiempoRes"></span></td>
+                </tr>
+                <tr>
+                    <th>Nombres del padre</th>
+                    <td colspan="3"><span id="txtPadre"></span></td>
+                </tr>
+                <tr>
+                    <th>Nombres de la madre</th>
+                    <td colspan="3"><span id="txtMadre"></span></td>
+                </tr>
+                <tr>
+                    <th>Nombres del cónyuge</th>
+                    <td colspan="3">
+                        <span id="txtConyuge"></span>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="linea_"></div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td width="40"><span class="nun">II</span></td>
+                    <td valign="middle"><div class="titulo_h2">EXPERIENCIA LABORAL</div></td>
+                </tr>
+            </table>
+            
+            <span id="lblExperiencia" class="noDataPaddingLeft"></span>
+            <table class="tabla_hoja" id="tblExperiencia" style="display:none;">
+            </table>
+            
+            <div class="linea_"></div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td width="40">
+                    <span class="nun">III</span>
+                    </td>
+                    <td valign="middle">
+                    <div class="titulo_h2">FORMACIÓN ACADÉMICA</div>
+                    </td>
+                </tr>
+            </table>
+            
+            <span class="titulo_h3">EDUCACIÓN BÁSICA REGULAR</span>
+                
+            <span class="titulo_h4">EDUCACIÓN PRIMARIA</span>
+            <span id="lblEducacionPrimaria" class="noData"></span>
+            <table class="tabla_hoja" id="tblEducacionPrimaria" style="display:none;">
+            </table>
+
+            <span class="titulo_h4">EDUCACIÓN SECUNDARIA</span>
+            <span id="lblEducacionSecundaria" class="noData"></span>
+            <table class="tabla_hoja" id="tblEducacionSecundaria" style="display:none;">
+            </table>
+
+            <span class="titulo_h3">EDUCACIÓN SUPERIOR</span>                           
+                        
+            <span class="titulo_h4">ESTUDIOS TÉCNICOS</span>
+            <span id="lblEducacionTecnico" class="noData"></span>
+            <table class="tabla_hoja" id="tblTecnico">                    
+            </table>
+
+            <span class="titulo_h4">ESTUDIOS UNIVERSITARIOS</span>
+            <span id="lblEducacionUniversitario" class="noData"></span>
+            <table class="tabla_hoja" id="tblUniversitario">
+            </table>
+
+            <span class="titulo_h4">ESTUDIOS DE POSTGRADO</span>
+            <span id="lblEducacionPostgrado" class="noData"></span>
+            <table class="tabla_hoja" id="tblPostgrado">
+            </table>
+                        
+            <div class="linea_"></div>
+
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                <td width="40">
+                <div class="nun">IV</div>
+                </td>
+                <td valign="middle">                                
+                <div class="titulo_h2">CARGOS POLÍTICOS</div>
+                </td>
+                </tr>
+            </table>
+
+            <span class="titulo_h3">A. CARGOS PARTIDARIOS</span>
+            <span id="lblCargosPartidarios" class="noData"></span>
+            <table class="tabla_hoja" id="tblCargoPartidario">
+            </table>
+                        
+            <span class="titulo_h3">B. CARGOS DE ELECCIÓN POPULAR</span>
+            <span id="lblCargosEleccion" class="noData"></span>
+            <table class="tabla_hoja" id="tblCargoEleccion">
+            </table>
+                
+            <span class="titulo_h3">C. MILITANCIA PARTIDARIA</span>
+            <span id="lblMilitancia" class="noData"></span>
+            <table class="tabla_hoja" id="tblRenuncias">
+            </table>
+                       
+                        
+            <div class="linea_"></div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td width="40">
+                    <div class="nun">V</div>
+                    </td>
+                    <td valign="middle">
+                    <div class="titulo_h2">RELACIÓN DE SENTENCIAS</div>
+                    </td>
+                </tr>
+            </table>
+                
+            <span class="titulo_h3">CONDENAS IMPUESTAS</span>
+            <span class="titulo_h4">Condenas impuestas al candidato por delitos dolosos y que hubieran quedado firmes, si las hubiere</span>
+            <span id="lblAmbitoPenal" class="noData"></span>
+            <table class="tabla_hoja" id="tblAmbitoPenal">
+            </table>
+
+            <span class="titulo_h3">CONDENAS QUE DECLARARON FUNDADAS O INFUNDADAS</span>
+            <span class="titulo_h4">Condenas que declararon fundadas o infundadas en parte, las demandas interpuestas contra los candidatos por incumplimiento de obligaciones familiares y/o alimentarias, contractuales y laborales, que hubieren quedado firmes.</span>
+            <span id="lblAmbitoCivil" class="noData"></span>
+            <table class="tabla_hoja" id="tblAmbitoCivil">
+            </table>
+                        
+            <div class="linea_"></div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                <td width="40">
+                <div class="nun">VI</div>
+                </td>
+                <td valign="middle">
+                <div class="titulo_h2">INFORMACIÓN ADICIONAL O COMPLEMENTARIA</div>
+                </td>
+                </tr>
+            </table>
+
+            <span class="titulo_h3">A. OTRA EXPERIENCIA </span>
+            <span id="lblOtraExperiencia" class="noData"></span>
+            <table class="tabla_hoja" id="tblAdicional">
+            </table>
+            
+                            
+            <span class="titulo_h3">B. DECLARACION JURADA DE INGRESOS, BIENES Y RENTAS</span>
+            <span class="titulo_h3">DECLARACIÓN DEL PATRIMONIO</span>
+            
+            <span class="titulo_h4">INGRESOS</span>
+                <span id="lblIngresos" class="noData"></span>
+                <table class="tabla_hoja" id="tblIngresos" style="display:none;">
+                    <tr>
+                        <td width="50%"></td>
+                        <th>Sector Público</th>
+                        <th>Sector Privado</th>
+                        <th>Total S/.</th>
+                    </tr>
+                    <tr>
+                        <th width="50%">REMUNERACIÓN BRUTA MENSUAL<br />
+                            <span class="txtDetalleIngreso">(Pago por planillas, sujetos a rentas de quinta categoría)</span>
+                        </th>
+                        <td class="alignRight"><span id="txtIngresoRemuneracionPublica"></span></td>
+                        <td class="alignRight"><span id="txtIngresoRemuneracionPrivada"></span></td>
+                        <td class="alignRight"><span id="txtIngresoRemuneracionTotal"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th>RENTA BRUTA MENSUAL POR EJERCICIO INDIVIDUAL<br />
+                            <span class="txtDetalleIngreso">(Ejercicio individual de profesión, oficio u otras tareas - renta de cuarta categoría)</span>
+
+                        </th>
+                        <td class="alignRight"><span id="txtIngresoRentaPublica"></span></td>
+                        <td class="alignRight"><span id="txtIngresoRentaPrivada"></span></td>
+                        <td class="alignRight"><span id="txtIngresoRentaTotal"></span></td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            OTROS INGRESOS MENSUALES<br />
+                            <span class="txtDetalleIngreso">(Predios arrendados, subarrendados o cedidos)</span><br />
+                            <span class="txtDetalleIngreso">(Bienes muebles arrendados, subarrendados o cedidos)</span><br />
+                            <span class="txtDetalleIngreso">(Intereses originados por colocación de capitales, regalias, rentas vitalicias, etc.)</span><br />
+                            <span class="txtDetalleIngreso">(Dietas o similares)</span>
+                        </th>
+                        <td class="alignRight"><span id="txtIngresoOtrosPublico"></span></td>
+                        <td class="alignRight"><span id="txtIngresoOtrosPrivado"></span></td>
+                        <td class="alignRight"><span id="txtIngresoOtrosTotal"></span></td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2"></td>                        
+                        <th>Total S/.</th>
+                        <td class="alignRight"><span id="txtCandidatoIngresoTotal"></span></td>
+                    </tr>
+
+
+                </table>
+            <span class="titulo_h4">BIENES INMUEBLES</span>
+            <span id="lblInmuebles" class="noData"></span>
+            <table class="tabla_hoja" id="tblCandidatoInmueble" style="display:none;">
+            </table>
+
+            <span class="titulo_h4">BIENES MUEBLES</span>
+            <span id="lblMuebles" class="noData"></span>
+            <table class="tabla_hoja" id="tblCandidatoMueble" style="display:none;">
+            </table>
+
+            <span class="titulo_h3">ACREENCIA Y OBLIGACIONES A SU CARGO</span>
+            <span id="lblAcreencias" class="noData"></span>
+            <table class="tabla_hoja" id="tblEgreso" style="display:none;">
+            </table>
+                            
+            <div class="linea_"></div>            
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tr>
+                    <td width="40"><div class="nun">VII</div></td>
+                    <td valign="middle"><div class="titulo_h2">OBSERVACIONES INGRESADAS</div></td>
+                </tr>
+            </table>
+
+            <span id="lblAnotaciones" class="noDataPaddingLeft"></span>
+            <table class="tabla_hoja" id="tblObservaciones" style="display:none;">
+            </table>
+                
+        </div>
+    </div>
+        
+    </div>
+
+    <script type="text/javascript" src="../jscript/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="../jscript/plugins.js"></script>
+    <script type="text/javascript" src="../jscript/json.js" ></script>
+    <script type="text/javascript" src="../jscript/sipe/HojaVida-Custom.js"></script>
+</body>
+</html>
