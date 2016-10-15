@@ -4,21 +4,22 @@ const request = require('request');
 const cheerio = require('cheerio');
 const needle = require('needle');
 const Converter = require('csvtojson').Converter;
+const batchPromises = require('batch-promises');
+
 
 const root_url = 'http://infogob.com.pe/Politico/politico.aspx';
 
 function scrape(csvFilePath) {
     return loadNamesCSV(csvFilePath)
         .then((persons) => {
-            const promises = persons.map(
-                (person) => doTheWork(person)
-            );
-
-            return Promise.all(promises);
+            const batchSize = 10;
+            return batchPromises(batchSize, persons, (person) => doTheWork(person));
         });
 }
 
 function doTheWork(person) {
+    console.log(`Working on person ${person.nombres}-${person.apellido_paterno}-${person.apellido_materno}`);
+
     return getPoliticoHtml(person)
         .then((politicoHtml) => {
             const personID = findPersonID(politicoHtml)
@@ -155,8 +156,6 @@ function getFichaTab1Html(personID) {
 }
 
 function getResumeLink(fichaTab1HTML) {
-    console.log('fichaTab1HTML', fichaTab1HTML)
-
     var $ = cheerio.load(fichaTab1HTML);
     const rowsMatching2014 = $(".mygrid tr").filter((i, el) => {
         const html = $(el).html();
