@@ -29,15 +29,29 @@ function doTheWork(person) {
             .then((personID) => {
                 return Promise.all([getFichaTab0Html(personID), getFichaTab1Html(personID)])
                     .then((fichaTab0Html, fichaTab1Html) => {
-                        saveHtml('fichaTab0', person, personId, fichaTab0Html);
-                        saveHtml('fichaTab1', person, personId, fichaTab1Html);
-
-                        return getResumeHtml(getResumeLink(fichaTab1HTML))
-                            .then((resumeHtml) => {
-                                saveHtml('resume', person, personId, resumeHtml);
-                            });
+                        return saveHtml('fichaTab0', person, personId, fichaTab0Html)
+                            .then(() => saveHtml('fichaTab1', person, personId, fichaTab1Html))
+                            .then(() => getResumeHtml(getResumeLink(fichaTab1HTML)))
+                            .then((resumeHtml) => saveHtml('resume', person, personId, resumeHtml));
                     });
             });
+    });
+}
+
+function getHtmlFileName(fileType, person, personId) {
+    return `${fileType}-${personId}-${person.nombres}-${person.apellido_paterno}-${person.apellido_materno}.html`;
+}
+
+function saveHtml(fileType, person, personId, html) {
+    return new Promise((resolve, reject) => {
+        const filename = getHtmlFileName(fileType, person, personId);
+
+        fs.writeFile(`${__dirname}/results/${filename}`, data, (err) => {
+            if (err) {
+                return reject(err);
+            }
+            return resolve();
+        });
     });
 }
 
@@ -75,7 +89,6 @@ function getPoliticoHtml() {
 function findPersonID(html) {
     const myregex = /ficha\.aspx\?IdPolitico=(\d+)/ig;
     const match = myregex.exec(html);
-    console.log(match)
     return Number(match[1]);
 }
 
@@ -83,4 +96,6 @@ module.exports = {
     scrape,
     loadNamesCSV,
     findPersonID,
+    getHtmlFileName,
+    doTheWork,
 };
