@@ -67,21 +67,53 @@ function loadNamesCSV(csvFilePath) {
     });
 }
 
-function getPoliticoHtml() {
+function getPoliticoHtml(person) {
     return new Promise((resolve, reject) => {
-        request.get(root_url, function(error, response, html){
-            if (!error && response.statusCode == 200) {
-                var $ = cheerio.load(html);
-                var input_tags = $('input').get();
-                input_tags.forEach(function(tag){
-                    if (tag.attribs.name == '__VIEWSTATE'){ viewstate = tag.attribs.value; } else
-                    if (tag.attribs.name == '__EVENTVALIDATION'){ eventvalidation = tag.attribs.value; } else
-                    if (tag.attribs.name == '__VIEWSTATEGENERATOR'){ viewstategenerator = tag.attribs.value}
-                });
-                console.log('Got the following for person ' + person.rowid + ':');
-                postPerson(person.nombres, person.apellido_paterno, person.apellido_materno, viewstate, viewstategenerator, eventvalidation);
+        request.get('http://infogob.com.pe/Politico/politico.aspx', (err, res, html) => {
+            console.log('GET politico.aspx: ' + res.statusCode);
+            if (err || res.statusCode !== 200) {
+                return reject(err);
             }
-            return;
+
+            const $ = cheerio.load(html);
+            const input_tags = $('input').get();
+            let viewstate, eventvalidation, viewstategenerator;
+
+            input_tags.forEach(function(tag) {
+                if (tag.attribs.name == '__VIEWSTATE'){
+                    viewstate = tag.attribs.value;
+                }
+                else if (tag.attribs.name == '__EVENTVALIDATION') {
+                    eventvalidation = tag.attribs.value;
+                }
+                else if (tag.attribs.name == '__VIEWSTATEGENERATOR') {
+                    viewstategenerator = tag.attribs.value;
+                }
+            });
+
+            const data = {
+        		'__LASTFOCUS': '',
+        		'__EVENTTARGET': '',
+        		'__EVENTARGUMENT': '',
+        		'__VIEWSTATE': viewstate,
+        		'__VIEWSTATEGENERATOR': viewstategenerator,
+        		'__VIEWSTATEENCRYPTED': '',
+        		'__EVENTVALIDATION': eventvalidation,
+        		'ctl00$ContentPlaceHolder1$txt_nombres': person.nombres,
+        		'ctl00$ContentPlaceHolder1$txt_paterno': person.apellido_paterno,
+        		'ctl00$ContentPlaceHolder1$txt_materno': person.apellido_materno,
+        		'ctl00$ContentPlaceHolder1$txt_dni': '',
+        		'ctl00$ContentPlaceHolder1$ImgBtnAceptar.x': '36',
+        		'ctl00$ContentPlaceHolder1$ImgBtnAceptar.y': '10'
+        	};
+
+            request.post('http://infogob.com.pe/Politico/politico.aspx', data, (err, res, html) => {
+                console.log('POST politico.aspx: ' + res.statusCode);
+                if (err || res.statusCode !== 200) {
+                    return reject(err);
+                }
+                return resolve(html);
+        	});
         });
     });
 }
@@ -99,4 +131,5 @@ module.exports = {
     getHtmlFileName,
     saveHtml,
     doTheWork,
+    getPoliticoHtml,
 };

@@ -6,6 +6,7 @@ import {
     findPersonID,
     getHtmlFileName,
     saveHtml,
+    getPoliticoHtml,
 } from './scraper';
 
 import htmlPolitico from './html/politico.html.js';
@@ -53,4 +54,20 @@ describe('scraper', () => {
             return saveHtml(fileType, person, personId, 'asdf');
         });
     });
+
+    describe('getPoliticoHtml', () => {
+        it('should actually make a request and return the html', () => {
+            const person = {
+                apellido_materno: 'ALVARADO',
+                apellido_paterno: 'ABAD',
+                nombres: 'THALIA',
+                rowid: 1,
+            };
+
+            return getPoliticoHtml(person)
+                .then((html) => {
+                    expect(html).toMatchSnapshot();
+                })
+        })
+    })
 });
