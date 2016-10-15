@@ -66,8 +66,8 @@ describe('scraper', () => {
 
             return getPoliticoHtml(person)
                 .then((html) => {
-                    expect(html).toMatchSnapshot();
+                    expect(html).toContain('ficha.aspx');
                 })
         })
-    })
+    });
 });

@@ -19,23 +19,21 @@ function scrape(csvFilePath) {
 }
 
 function doTheWork(person) {
-    return new Promise((resolve, reject) => {
-        getPoliticoHtml(person)
-            .then((politicoHtml) => {
-                const personID = getPersonID(politicoHtml)
-                saveHtml('politico', person, personId, politicoHtml);
-                return personID;
-            })
-            .then((personID) => {
-                return Promise.all([getFichaTab0Html(personID), getFichaTab1Html(personID)])
-                    .then((fichaTab0Html, fichaTab1Html) => {
-                        return saveHtml('fichaTab0', person, personId, fichaTab0Html)
-                            .then(() => saveHtml('fichaTab1', person, personId, fichaTab1Html))
-                            .then(() => getResumeHtml(getResumeLink(fichaTab1HTML)))
-                            .then((resumeHtml) => saveHtml('resume', person, personId, resumeHtml));
-                    });
-            });
-    });
+    return getPoliticoHtml(person)
+        .then((politicoHtml) => {
+            const personID = findPersonID(politicoHtml)
+            return saveHtml('politico', person, personID, politicoHtml)
+                .then(() => personID);
+        })
+        // .then((personID) => {
+        //     return Promise.all([getFichaTab0Html(personID), getFichaTab1Html(personID)])
+        //         .then((fichaTab0Html, fichaTab1Html) => {
+        //             return saveHtml('fichaTab0', person, personId, fichaTab0Html)
+        //                 .then(() => saveHtml('fichaTab1', person, personId, fichaTab1Html))
+        //                 .then(() => getResumeHtml(getResumeLink(fichaTab1HTML)))
+        //                 .then((resumeHtml) => saveHtml('resume', person, personId, resumeHtml));
+        //         });
+        // })
 }
 
 function getHtmlFileName(fileType, person, personId) {
@@ -107,12 +105,12 @@ function getPoliticoHtml(person) {
         		'ctl00$ContentPlaceHolder1$ImgBtnAceptar.y': '10'
         	};
 
-            request.post('http://infogob.com.pe/Politico/politico.aspx', data, (err, res, html) => {
+            request.post({url: 'http://infogob.com.pe/Politico/politico.aspx', form: data}, (err, res, wef) => {
                 console.log('POST politico.aspx: ' + res.statusCode);
                 if (err || res.statusCode !== 200) {
                     return reject(err);
                 }
-                return resolve(html);
+                return resolve(wef);
         	});
         });
     });
